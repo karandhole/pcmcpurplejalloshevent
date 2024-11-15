@@ -56,7 +56,7 @@ const LatestNews: React.FC = () => {
                   <div className="blog-image">
                     <Link href="/blog/details">
                       <Image
-                        src="/images/blog1.jpg"
+                        src="/images/blog1.1.jpg"
                         alt="blog"
                         width={800}
                         height={550}
@@ -72,12 +72,11 @@ const LatestNews: React.FC = () => {
                     <span className="date">25 Feb, 2024</span>
                     <h3>
                       <Link href="/blog/details">
-                        The Most Popular New top Business Apps
+                        The Most Popular News
                       </Link>
                     </h3>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum.
+                    Pcmc Divyang Bhavan Foundation, Jagtik karnbahdhir Din celebration
                     </p>
                     <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
@@ -91,7 +90,7 @@ const LatestNews: React.FC = () => {
                   <div className="blog-image">
                     <Link href="/blog/details">
                       <Image
-                        src="/images/blog2.jpg"
+                        src="/images/blog1.2.jpg"
                         alt="blog"
                         width={800}
                         height={550}
@@ -107,12 +106,12 @@ const LatestNews: React.FC = () => {
                     <span className="date">27 Feb, 2024</span>
                     <h3>
                       <Link href="/blog/details">
-                        The Best Marketing top Management Tools
+                        The Best Direction guidance
                       </Link>
                     </h3>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum.
+                    PCMC Divyang Bhavan Foundation, Direction guidance for PwDs
+14 Nov 2024
                     </p>
                     <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
@@ -126,7 +125,7 @@ const LatestNews: React.FC = () => {
                   <div className="blog-image">
                     <Link href="/blog/details">
                       <Image
-                        src="/images/blog3.jpg"
+                        src="/images/blog1.3.jpg"
                         alt="blog"
                         width={800}
                         height={550}
@@ -139,15 +138,15 @@ const LatestNews: React.FC = () => {
                   </div>
 
                   <div className="blog-post-content">
-                    <span className="date">28 Feb, 2024</span>
+                    <span className="date">4 Oct 2024</span>
                     <h3>
                       <Link href="/blog/details">
-                        3 WooCommerce Plugins to Boost Sales
+                      Jagtik Karnbadheer Divas
                       </Link>
                     </h3>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum.
+                    Programs organized in the occasion of "Jagtik Karnbadheer Divas" at PCMC Divyang Bhavn Foundation 
+
                     </p>
                     <Link href="/blog/details" className="read-more-btn">
                       Read More <i className="icofont-double-right"></i>
