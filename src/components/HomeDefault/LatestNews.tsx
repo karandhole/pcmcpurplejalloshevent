@@ -145,7 +145,7 @@ const LatestNews: React.FC = () => {
                       </Link>
                     </h3>
                     <p>
-                    Programs organized in the occasion of "Jagtik Karnbadheer Divas" at PCMC Divyang Bhavn 
+                    Programs organized in the occasion of &quot;Jagtik Karnbadheer Divas&quot; at PCMC Divyang Bhavn 
 
                     </p>
                     <Link href="/blog/details" className="read-more-btn">
@@ -179,7 +179,7 @@ const LatestNews: React.FC = () => {
                       </Link>
                     </h3>
                     <p>
-                    Programs organized in the occasion of "Jagtik Karnbadheer Divas" at PCMC Divyang Bhavn 
+                    Programs organized in the occasion of &quot;Jagtik Karnbadheer&quot; Divas at PCMC Divyang Bhavn 
 
                     </p>
                     <Link href="/blog/details" className="read-more-btn">
