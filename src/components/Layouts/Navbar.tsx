@@ -32,12 +32,12 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div id="navbar" className="elkevent-nav">
+      <div id="navbar" className="elkevent-nav" >
         <nav className="navbar navbar-expand-lg navbar-light">
-          <div className="container">
+          <div className="container" >
             <Link href="/" className="navbar-brand">
               <Image
-                src="/images/nature-logo.png"
+                src="/images/PCMC1.png"
                 alt="logo"
                 width={120}
                 height={38}

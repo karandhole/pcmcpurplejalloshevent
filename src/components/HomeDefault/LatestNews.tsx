@@ -64,7 +64,7 @@ const LatestNews: React.FC = () => {
                     </Link>
 
                     <div className="post-tag">
-                      <Link href="/blog/details">Technology</Link>
+                      <Link href="/blog/details">DBF</Link>
                     </div>
                   </div>
 
@@ -98,7 +98,7 @@ const LatestNews: React.FC = () => {
                     </Link>
 
                     <div className="post-tag">
-                      <Link href="/blog/details">Agency</Link>
+                      <Link href="/blog/details">DBF</Link>
                     </div>
                   </div>
 
@@ -133,7 +133,7 @@ const LatestNews: React.FC = () => {
                     </Link>
 
                     <div className="post-tag">
-                      <Link href="/blog/details">IT</Link>
+                      <Link href="/blog/details">DBF</Link>
                     </div>
                   </div>
 
@@ -145,7 +145,41 @@ const LatestNews: React.FC = () => {
                       </Link>
                     </h3>
                     <p>
-                    Programs organized in the occasion of "Jagtik Karnbadheer Divas" at PCMC Divyang Bhavn Foundation 
+                    Programs organized in the occasion of "Jagtik Karnbadheer Divas" at PCMC Divyang Bhavn 
+
+                    </p>
+                    <Link href="/blog/details" className="read-more-btn">
+                      Read More <i className="icofont-double-right"></i>
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="col-lg-12 col-md-12">
+                <div className="single-blog-post">
+                  <div className="blog-image">
+                    <Link href="/blog/details">
+                      <Image
+                        src="/images/blog1.3.jpg"
+                        alt="blog"
+                        width={800}
+                        height={550}
+                      />
+                    </Link>
+
+                    <div className="post-tag">
+                      <Link href="/blog/details">DBF</Link>
+                    </div>
+                  </div>
+
+                  <div className="blog-post-content">
+                    <span className="date">4 Oct 2024</span>
+                    <h3>
+                      <Link href="/blog/details">
+                      Jagtik Karnbadheer Divas
+                      </Link>
+                    </h3>
+                    <p>
+                    Programs organized in the occasion of "Jagtik Karnbadheer Divas" at PCMC Divyang Bhavn 
 
                     </p>
                     <Link href="/blog/details" className="read-more-btn">
@@ -155,7 +189,7 @@ const LatestNews: React.FC = () => {
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide className="col-lg-12 col-md-12">
+              {/* <SwiperSlide className="col-lg-12 col-md-12">
                 <div className="single-blog-post">
                   <div className="blog-image">
                     <Link href="/blog/details">
@@ -188,7 +222,7 @@ const LatestNews: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </Swiper>
           </div>
         </div>
