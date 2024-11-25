@@ -38,7 +38,7 @@ const MainBanner: React.FC = () => {
 
                 <ul>
                   <li>
-                    <i className="icofont-compass"></i> PCMC Divyang Bhavan Foundation
+                    <i className="icofont-compass"></i> PCMC Divyang Bhavan Foundation pune
                     
                   </li>
                   <li>
