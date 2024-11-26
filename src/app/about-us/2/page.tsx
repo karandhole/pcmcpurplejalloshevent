@@ -7,7 +7,7 @@ import BuyTicket from "@/components/Common/BuyTicket";
 import Subscribe from "@/components/Common/Subscribe";
 import Footer from "@/components/Layouts/Footer";
 import WhyUs from "@/components/AboutUsTwo/WhyUs";
-import Speakers from "@/components/HomeTwo/Speakers";
+
 
 export default function Page() {
   return (
@@ -29,7 +29,7 @@ export default function Page() {
 
       <Cta />
 
-      <Speakers />
+   
  
       <Partner />
 
