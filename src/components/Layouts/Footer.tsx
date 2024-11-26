@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 <ul className="social-links">
                   <li>
                     <a
-                      href="https://www.facebook.com/"
+                      href="https://www.facebook.com/people/Divyang-Bhavan-PCMC/61563587007236/"
                       className="facebook"
                       target="_blank"
                     >
@@ -48,16 +48,18 @@ const Footer: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://twitter.com/"
-                      className="twitter"
-                      target="_blank"
-                    >
-                      <i className="icofont-twitter"></i>
+                  href="https://www.youtube.com/@DivyangBhavanPCMC"
+                 className="youtube"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                          >
+                 <i className="icofont-youtube-play"></i>
                     </a>
                   </li>
+
                   <li>
                     <a
-                      href="https://www.linkedin.com/"
+                      href="https://linkedin.com/company/divyang-bhavan-pcmc"
                       className="linkedin"
                       target="_blank"
                     >
@@ -66,7 +68,7 @@ const Footer: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://www.instagram.com/"
+                      href="https://www.instagram.com/divyang_bhavan_pcmc/"
                       className="instagram"
                       target="_blank"
                     >
@@ -82,10 +84,12 @@ const Footer: React.FC = () => {
                 <div className="logo">
                   <Link href="/">
                     <Image
-                      src="/images/nature-logo.png"
+                      src="/images/logop.png"
+                      
                       alt="logo"
                       width={120}
                       height={38}
+                      style={{backgroundColor:"white"}}
                     />
                   </Link>
                 </div>

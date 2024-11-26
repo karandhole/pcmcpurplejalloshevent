@@ -2,10 +2,11 @@
 
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
-
+import Link from "next/link";
 import Image from "next/image";
 import Countdown from "./Countdown";
 import { Modal, Button, Form } from "react-bootstrap";
+import { url } from "inspector";
 
 const MainBanner: React.FC = () => {
   const [toggler, setToggler] = useState(false); // Lightbox toggler
@@ -14,23 +15,27 @@ const MainBanner: React.FC = () => {
   // State for form data
   const [formData, setFormData] = useState({
     category: "",
-    fullName: "",
-    contact: "",
-    email: "",
-    state: "",
-    city: "",
-    pinCode: "",
+    FullName: "",
+    Contact: "",
+    Email: "",
+    City: "",
+    PinCode: "",
+    State: "",
+    Purpose: "",
+    Message: "",
   });
 
   // State for form validation
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<{ [key: string]: string }>({}); // Fixed error typing
 
   // Modal Handlers
   const handleModalOpen = () => setShowModal(true);
   const handleModalClose = () => setShowModal(false);
 
   // Handle input change
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -40,14 +45,15 @@ const MainBanner: React.FC = () => {
 
   // Validate form fields
   const validateForm = () => {
-    const errors: any = {};
-    if (!formData.category) errors.category = "Please select a category.";
-    if (!formData.fullName) errors.fullName = "Full name is required.";
-    if (!formData.contact) errors.contact = "Contact number is required.";
-    if (!formData.email) errors.email = "Email is required.";
-    if (!formData.state) errors.state = "State is required.";
-    if (!formData.city) errors.city = "City is required.";
-    if (!formData.pinCode) errors.pinCode = "Pin code is required.";
+    const errors: { [key: string]: string } = {};
+    if (!formData.category) errors.category = "* Required";
+    if (!formData.FullName) errors.FullName = "* Required";
+    if (!formData.Contact) errors.Contact = "* Required";
+    if (!formData.Email) errors.Email = "* Required";
+    if (!formData.City) errors.City = "* Required";
+    if (!formData.PinCode) errors.PinCode = "* Required";
+    if (!formData.State) errors.State = "* Required";
+    if (!formData.Purpose) errors.Purpose = "* Required";
     return errors;
   };
 
@@ -62,12 +68,14 @@ const MainBanner: React.FC = () => {
       alert("Registration successful!");
       setFormData({
         category: "",
-        fullName: "",
-        contact: "",
-        email: "",
-        state: "",
-        city: "",
-        pinCode: "",
+        FullName: "",
+        Contact: "",
+        Email: "",
+        City: "",
+        PinCode: "",
+        State: "",
+        Purpose: "",
+        Message: "",
       });
       setErrors({});
       handleModalClose();
@@ -79,14 +87,14 @@ const MainBanner: React.FC = () => {
       {/* Lightbox */}
       <FsLightbox
         toggler={toggler}
-        sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
+        sources={["https://www.youtube.com/watch?v=ML76DRU-c6U"]}
       />
 
       {/* Banner */}
       <div
         className="main-banner"
         style={{
-          backgroundImage: `url(/images/images1.jpg)`,
+          backgroundImage: 'url("/images/images1.jpg")'
         }}
       >
         <div className="d-table">
@@ -147,7 +155,7 @@ const MainBanner: React.FC = () => {
         </div>
 
         {/* Countdown */}
-        <Countdown endDate="2024-01-17T00:00:00" />
+        <Countdown endDate="2025-01-17T07:00:00" />
 
         {/* Shape Images */}
         <div className="shape1">
@@ -187,14 +195,29 @@ const MainBanner: React.FC = () => {
       {/* Registration Modal */}
       <Modal show={showModal} onHide={handleModalClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Registration Form</Modal.Title>
+          <Modal.Title
+            style={{
+              textAlign: "center",
+              width: "100%",
+              fontSize: "1.5rem",
+            }}
+          >
+            Registration Form
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleFormSubmit}>
             {/* Category */}
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 text-center">
               <Form.Label>Select Category</Form.Label>
-              <div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "20px",
+                  marginTop: "10px",
+                }}
+              >
                 <Form.Check
                   type="radio"
                   label="Visitor"
@@ -225,16 +248,40 @@ const MainBanner: React.FC = () => {
               )}
             </Form.Group>
 
+            {/* Purpose */}
+            <Form.Group className="mb-3">
+              <Form.Label>Purpose</Form.Label>
+              <Form.Select
+                name="Purpose"
+                value={formData.Purpose}
+                onChange={handleInputChange}
+              >
+                <option value="">Select Purpose</option>
+                <option value="Visitor to enjoy Purple Jallosh">
+                  Visitor to enjoy Purple Jallosh
+                </option>
+                <option value="School/NGO to participate in Purple Jallosh">
+                  School/NGO to participate in Purple Jallosh
+                </option>
+                <option value="Delegate Event Guest">
+                  Delegate Event Guest
+                </option>
+              </Form.Select>
+              {errors.Purpose && (
+                <small className="text-danger">{errors.Purpose}</small>
+              )}
+            </Form.Group>
+
             {/* Other Input Fields */}
-            {["fullName", "contact", "email", "state", "city", "pinCode"].map(
+            {["FullName", "Contact", "Email", "City", "PinCode", "State", "Message"].map(
               (field) => (
                 <Form.Group className="mb-3" key={field}>
                   <Form.Control
                     type="text"
                     placeholder={field.replace(/([A-Z])/g, " $1")}
                     name={field}
-                    value={formData[field]}
-                    onChange={handleInputChange}
+                    value={formData[field as keyof typeof formData]}
+                    // onChange={handleInputChange}
                   />
                   {errors[field] && (
                     <small className="text-danger">{errors[field]}</small>
@@ -253,4 +300,4 @@ const MainBanner: React.FC = () => {
   );
 };
 
-export default MainBanner;  
+export default MainBanner;

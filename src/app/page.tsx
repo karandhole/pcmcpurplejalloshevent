@@ -11,6 +11,7 @@ import LatestNews from "@/components/HomeDefault/LatestNews";
 import BuyTicket from "@/components/Common/BuyTicket";
 import Subscribe from "@/components/Common/Subscribe";
 import Footer from "@/components/Layouts/Footer";
+import StallBooking from "@/components/HomeDefault/Stallbooking/Stallbooking";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
       <Speakers />
 
       <EventSchedules />
+
+      <StallBooking/>
 
       <FunFact />
 

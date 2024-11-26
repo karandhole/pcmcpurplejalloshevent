@@ -26,13 +26,13 @@ const BuyTicket: React.FC = () => {
                 </div>
               </div>
 
-              <div className="col-lg-6">
+              {/* <div className="col-lg-6">
                 <div className="buy-ticket-btn">
                   <Link href="#" className="btn btn-primary">
                     Register Now
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
