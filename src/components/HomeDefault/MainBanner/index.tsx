@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
-import Link from "next/link";
+
 import Image from "next/image";
 import Countdown from "./Countdown";
 import { Modal, Button, Form } from "react-bootstrap";
