@@ -102,7 +102,7 @@ const MainBanner: React.FC = () => {
             <div className="container">
               <div className="main-banner-content">
                 <p>
-                  Are you <span>ready</span> to attend?
+                  Are you <span>ready</span> for the magic of purple ?
                 </p>
                 <p
                   style={{
@@ -117,7 +117,7 @@ const MainBanner: React.FC = () => {
                       color: "white",
                       fontSize: "43px",
                       fontWeight: "600",
-                      fontFamily: "cursive",
+                   
                     }}
                   >
                     PURPLE JALLOSH - 2024
